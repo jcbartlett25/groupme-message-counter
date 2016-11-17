@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>GroupMe Counter</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- vendor styles -->
+  <link rel="stylesheet" href="/css/vendor/bootstrap/bootstrap.min.css">
+  <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+  <!-- custom styles -->
+  <link rel="stylesheet" href="/css/home.css">   
+
+  <!-- vendor libs -->
+  <script src="/js/vendor/jquery/jquery-1.11.1.min.js"></script>
+  <script src="/js/vendor/jquery-ui/jquery-ui.min.js"></script>
+  <script src="/js/vendor/bootstrap/bootstrap.min.js"></script>
+  <script src="/js/vendor/angular/angular.min.js"></script>
+  <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+</head>
+
+<!-- Navbar -->
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">GroupMe Message Counter</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#home">WHAT</a></li>
+        <li><a href="#why">WHY</a></li>
+        <li><a href="#how">HOW</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<body>
+
+<!-- First Container -->
+<div class="container-fluid bg-1 text-center" id="home">
+  <h1 class="margin">GroupMe Message Counter</h1>
+  <h3>See Who's Active</h3>
+  <a href="https://oauth.groupme.com/oauth/authorize?client_id=wS3QWMlyI9FgDfq4ByvPUwVfdkv57qZ9OHFBM9NMfabOBN07" class="button"><button type="button" id="start_creation">Try It Out!</button></a>
+</div>
+
+<!-- Second Container -->
+<div class="container-fluid bg-2 text-center" id="why">
+  <h3 class="margin">Why Did I Make This?</h3>
+  <p>To prove a point to a friend who accused me of being inactive in one of our groups</p>
+</div>
+
+<!-- Third Container (Grid) -->
+<div class="container-fluid bg-3 text-center" id="how">
+  <h3 class="margin">How Does This Work?</h3><br>
+  <div class="row">
+    <div class="col-sm-4">
+      <p>Log In...</p>
+      <img src="/img/bodyscan.png" class="img-responsive margin demo" style="width:100%" alt="Image Goes Here">
+    </div>
+    <div class="col-sm-4">
+      <p>...Choose Your Group...</p>
+      <img src="/img/customize.png" class="img-responsive margin demo" style="width:100%" alt="Image Goes Here">
+    </div>
+    
+    <div class="col-sm-4">
+      <p>...I'll Handle The Rest!</p>
+      <img src="/img/final.png" class="img-responsive margin demo" style="width:100%" alt="Image Goes Here">
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="container-fluid bg-4 text-center">
+  <p id="boot">An Application By <a href="http://www.linkedin.com/in/jcbartlett">Joshua Bartlett</a></p>
+</footer>
+
+</body>
+
+</html>

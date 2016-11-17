@@ -1,0 +1,24 @@
+{
+  "name": "groupme-message-counter",
+  "version": "1.0.0",
+  "description": "counts messages in a specific group for groupme",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jcbartlett25/groupme-message-counter.git"
+  },
+  "dependencies": {
+    "express": "^4.10.2",
+    "path": "^0.12.7",
+    "socket.io": "^1.3.7"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jcbartlett25/groupme-message-counter/issues"
+  },
+  "homepage": "https://github.com/jcbartlett25/groupme-message-counter#readme"
+}
