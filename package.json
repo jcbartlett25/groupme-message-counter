@@ -4,7 +4,7 @@
   "description": "counts messages in a specific group for groupme",
   "main": "app.js",
   "scripts": {
-    "test": "node app.js"
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
