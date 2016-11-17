@@ -6,6 +6,8 @@ var io = require('socket.io')(http);
 var path = require('path');
 var numUsers = 0;
 
+var port = process.env.PORT || 8080;
+
 // Creating static path
 var __dirname = path.resolve();
 app.use(express.static(path.join(__dirname, 'public')));
@@ -31,6 +33,6 @@ io.on('connection', function(socket){
 });
 
 // Hard coded the port for simplicity at the moment
-http.listen(3005, function(){
+http.listen(port, function(){
     console.log('listening on *:3005');
 });
