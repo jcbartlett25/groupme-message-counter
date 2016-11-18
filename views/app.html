@@ -12,10 +12,10 @@
 
   <!-- vendor styles -->
   <link rel="stylesheet" href="/css/vendor/bootstrap/bootstrap.min.css">
-  <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 
   <!-- custom styles -->
-  <!--<link rel="stylesheet" href="/css/home.css">   -->
+  <link rel="stylesheet" href="/css/app.css">
 
   <!-- vendor libs -->
   <script src="/js/vendor/jquery/jquery-1.11.1.min.js"></script>
@@ -26,9 +26,40 @@
 
   <!-- custom js -->
   <script src="/js/client.js"></script>
+  <script src="/js/messagesApp.js"></script>
+  <script src="/js/controllers/messagesController.js"></script>
+  <script src="/js/services/messagesService.js"></script>
+  
 
 </head>
 
-<body>
+<body ng-app="messagesApp" ng-controller="messagesController">
   <h1>Logged In!</h1>
+
+  <div id="container">
+        <div class="text" id="search_results" ng-show="!loading" ng-hide="done">
+            <div ng-repeat="result in results">
+              <div class="col-sm-1" style="cursor: pointer;">
+                <img src={{result.image_url}} ng-click="reset(); curren=result; getMessage(result.group_id,result.name,result.image_url);" height="70" width="70">
+              </div>
+              <div class="col-sm-11 group-chat">
+                <p ng-click="reset(); curren=result; getMessage(result.group_id,result.name,result.image_url);" style="cursor: pointer;" id="group_title">{{result.name}} ({{result.messages.count}} messsages)</p>
+                <span id="group_preview">{{result.messages.preview.text}}</span>
+              </div>
+            </div>
+        </div>
+        <div ng-show="loading" class="img" id="loading_img">
+          <img src="/img/loading.gif" height="50" width="50">
+        </div>
+        <div ng-show="done" class="text" id="results">
+          <button ng-click="getGroups(); done=false;" style="color:black;">Back!</button>
+          <p>{{groupName}}</p>
+          <ul ng-repeat="user in messageCounter">
+            <li>{{user.name}}: {{user.count}} message(s)</li>
+          </ul>
+        </div>
+  </div>
+
 </body>
+
+</html>

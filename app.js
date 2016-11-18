@@ -34,5 +34,5 @@ io.on('connection', function(socket){
 
 // Hard coded the port for simplicity at the moment
 http.listen(port, function(){
-    console.log('listening on *:3005');
+    console.log('listening on *:'+port);
 });

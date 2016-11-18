@@ -1,0 +1,23 @@
+body {
+    font: 20px Montserrat, sans-serif;
+    line-height: 1.8;
+    color: #EEF1EF;
+    background-color: #1C2321;
+}
+
+.group-chat {
+    border: 2px solid #EEF1EF;
+    margin-bottom-bottom: 5px;
+}
+
+#search_results{
+
+}
+
+#group_preview{
+    font-size: 16px;
+}
+
+#group_title{
+    font-size: 25px;
+}
